@@ -78,5 +78,18 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+// a route to handle "About Us" content
+app.get('/about', (req, res) => {
+  res.json({
+    title: "About Us",
+    paragraphs: [
+      "Hi, I’m Ava! I’m a senior Computer Science major with a minor in Website Design & Development. I recently founded Simply Devign, LLC, a web development and design business dedicated to building custom websites for clients ranging from e-commerce brands to creative professionals.",
+      "Outside of school, I love watching Dancing with the Stars, listening to The Toast, going on runs, and spending time with my friends. I’m always looking for a good balance between staying active, relaxing with a favorite show or podcast, and making memories with the people I care about."
+    ],
+    imageUrl: "http://localhost:7002/ava.jpg"
+
+  });
+});
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
